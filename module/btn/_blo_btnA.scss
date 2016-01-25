@@ -1,0 +1,6 @@
+﻿/** blo-buttonA depend on **/
+.bBtnA{
+	display: inline-block; height: 30px; line-height: 30px; padding: 0 20px; border: 1px solid $cloBorA; border-radius: 3px; color: #fff; background: $cloBgA; @include prePro(box-sizing,border-box);
+	&:hover{color: #fff;}
+}
+

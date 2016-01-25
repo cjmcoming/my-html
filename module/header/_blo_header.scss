@@ -1,0 +1,11 @@
+﻿.bHeader{
+	width: 100%; height: 51px; line-height: 51px; border-bottom: 1px solid #e5e5e5; position: absolute; z-index: 99; left: 0; top: 0; background: #fbfbfb; @include prePro(box-sizing,border-box);
+	&.fixed{position: fixed;}
+	.bBtnA,.bBtnB,.bDropA{float: right; margin-top: 10px; margin-left: 10px;}
+}
+.bHeader_in{padding: 0 70px;}
+@include bp(0,640px) {
+	.bHeader_in{padding: 0 10px;}
+}
+.bHeader_logo{float: left; height: 51px; line-height: 51px; font-size: 22px; font-weight: 700; color: #bec5cb;}
+

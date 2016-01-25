@@ -1,0 +1,22 @@
+﻿/** blo-dropA depend on _keyframes.scss **/
+.bDropA{
+	display: inline-block; height: 30px; line-height: 30px; padding: 0 33px 0 23px; border: 1px solid $cloBorB; border-radius: 3px; position: relative; cursor: pointer; background: $cloBgB; @include prePro(box-sizing,border-box);
+	&::before,&::after{content: ""; display: block; position: absolute; right: 9px;}
+	&::before{top: 9px; @include arrow(top,4px,#a3a3a3);}
+	&::after{bottom: 9px; @include arrow(bottom,4px,#a3a3a3);}
+	&:hover{
+		.bDropA_pop{display: block; }
+	}
+}
+.bDropA_tit{
+	display: block;
+}
+.bDropA_pop{
+	display: none; width: 100%; padding: 8px 0; border: solid $cloBorB; border-width: 0 1px 1px; border-radius: 0 0 3px 3px; position: absolute; top:26px; left:-1px; background: $cloBgB; @include animation('fadeIn 0.5s');
+	a{
+		display: block; height: 26px; line-height:26px; text-align: center;
+	}
+}
+
+
+

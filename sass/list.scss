@@ -1,0 +1,41 @@
+﻿$bgBaseUrl : "../bg/";
+
+@import "variate";
+@import "mixin";
+@import "blo_reset";
+
+@import "../module/header/blo_header";
+
+@import "../module/drop/blo_dropA";
+@import "keyframes";
+
+@import "../module/btn/btnA";
+@import "../module/btn/btnB";
+
+@import "../module/pic/blo_picA";
+@import "../module/pic/blo_picB";
+@import "../module/pic/blo_picC";
+
+@import "../module/tab/blo_tabA";
+
+
+.listTxtA{text-align: center;}
+.listTxtA_1{margin-top: 18px; line-height: 38px; font-size: 22px; color: $cloTxtA;}
+.listTxtA_2{line-height: 28px; color: $cloTxtB;}
+.listTxtA_3{width: 470px; margin: 5px auto 0;  color: $cloTxtC;}
+.listTxtA_3_top{float: right;}
+.listTxtA_3_bot{float: left;}
+@include bp(0,470px) {
+	.listTxtA_3{width: auto;}
+	.listTxtA_3_top{display: block; float: none;}
+	.listTxtA_3_bot{display: block; float: none;}
+}
+
+.listTab{
+	margin-top: 48px;
+	.bTabA_con{padding: 20px 0; background: #f7f8fa;}
+}
+
+
+
+

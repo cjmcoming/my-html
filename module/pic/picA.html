@@ -1,0 +1,40 @@
+﻿<!doctype HTML>
+<html>
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>dropA</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="picA.css" />
+
+</head>
+
+
+<body>
+
+	<div class="bPicA">
+		<div id="bPicA_bg" class="bPicA_bg" style="background-image:url(../../img/banner.jpg);"></div>
+	</div>
+
+	<div style="height:1000px;"></div>
+
+
+	<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		$(window).on("scroll", function() {
+			var nScrollTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+			if(nScrollTop < 600) {
+				$("#bPicA_bg").css("bottom", -nScrollTop/2);
+			}else{
+				return;
+			}
+		});
+	</script>
+
+</body>
+</html>
+

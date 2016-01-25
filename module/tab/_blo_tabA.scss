@@ -1,0 +1,14 @@
+﻿/** blo-tabA **/
+.bTabA_tit{
+	height: 48px; border: solid #eeeff2; border-width: 1px 0; text-align: center;
+	span{
+		display: inline-block; height: 47px; line-height: 47px; padding: 0 19px; cursor: pointer;
+		&.cur{border-bottom: 2px solid $cloBgA; color: $cloBgA;}
+	}
+}
+.bTabA_con{
+	display: none;
+	&.show{display: block;}
+}
+
+
