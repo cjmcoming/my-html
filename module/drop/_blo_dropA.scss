@@ -18,5 +18,7 @@
 	}
 }
 
-
+@include bp(0,413px) {
+	.bDropA{padding: 0 20px 0 10px; font-size: 12px;}
+}
 

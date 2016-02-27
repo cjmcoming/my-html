@@ -133,4 +133,9 @@ body .f12 {
     left: 9px;
     background: url(../../bg/icon_person.png) no-repeat 0 0; }
 
+@media only screen and (max-width: 413px) {
+  .bBtnB {
+    padding-right: 9px;
+    font-size: 12px; } }
+
 /*# sourceMappingURL=btnB.css.map */

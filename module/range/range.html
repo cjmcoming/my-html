@@ -1,0 +1,51 @@
+﻿<!doctype HTML>
+<html>
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>tab</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="rangeA.css" />
+	<style type="text/css">
+		.space{padding: 30px; background: #000;}
+	</style>
+</head>
+
+
+<body>
+
+	<div class="space">
+
+		<div class="bRangeA" id="bRangeA_1"><input type="range" min="0" max="100" step="1" value="50" /></div>
+
+		<div class="bRangeA" id="bRangeA_2"><input type="range" min="0" max="100" step="1" value="50" /></div>
+
+	</div>
+
+	<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			var o = $(".bRangeA input[type=range]");
+			if(o.length) {
+				o.each(function(i) {
+					var oStyle = document.createElement('style'),
+						sStyle = "",
+						nMax = $(this).attr("max");
+					document.body.appendChild(oStyle);
+					o.eq(i).on("input", function() {
+						var nPercent = Math.round($(this).val() / nMax * 100)
+						sStyle = "#" + $(this).parent().attr("id") + " input[type=range]::-webkit-slider-runnable-track {background-image: -webkit-linear-gradient(left, blue " + nPercent + "%, #fff " + nPercent + "%); background-image: linear-gradient(left, blue " + nPercent + "%, #fff " + nPercent + "%);}" + "#" + $(this).parent().attr("id") + " input[type=range]::-moz-slider-runnable-track {background-image: -moz-linear-gradient(left, blue " + nPercent + "%, #fff " + nPercent + "%); background-image: linear-gradient(left, blue " + nPercent + "%, #fff " + nPercent + "%);}";
+						oStyle.textContent = sStyle;
+					});
+				});
+			}
+		})();
+	</script>
+
+</body>
+</html>
+

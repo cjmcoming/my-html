@@ -105,35 +105,55 @@ a:hover {
 .fr, .subMark {
   float: right; }
 
-body .f12 {
-  font-size: 12px; }
+.noscroll {
+  overflow: hidden; }
 
-/** blo-picB **/
-.bPicB {
-  border: 2px solid #fff;
-  border-radius: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box; }
+/** blo-rangeA **/
+.bRangeA {
+  width: 102px; }
+  .bRangeA input[type=range] {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    width: 100%;
+    /* Specific width is required for Firefox. */
+    background: none; }
+  .bRangeA input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -2px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
+  .bRangeA input[type=range]::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer; }
+  .bRangeA input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, blue 50%, #fff 50%);
+    background: -moz-linear-gradient(left, blue 50%, #fff 50%);
+    background: -ms-linear-gradient(left, blue 50%, #fff 50%);
+    background: -o-linear-gradient(left, blue 50%, #fff 50%);
+    background: linear-gradient(left, blue 50%, #fff 50%); }
+  .bRangeA input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, blue 50%, #fff 50%);
+    background: -moz-linear-gradient(left, blue 50%, #fff 50%);
+    background: -ms-linear-gradient(left, blue 50%, #fff 50%);
+    background: -o-linear-gradient(left, blue 50%, #fff 50%);
+    background: linear-gradient(left, blue 50%, #fff 50%); }
+  .bRangeA input[type=range]:focus {
+    outline: none;
+    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
-@media only screen and (max-width: 700px) {
-  .bPicB {
-    width: 84px;
-    height: 84px; }
-    .bPicB img {
-      width: 80px;
-      height: 80px; } }
-@media only screen and (min-width: 701px) {
-  .bPicB {
-    width: 104px;
-    height: 104px; }
-    .bPicB img {
-      width: 100px;
-      height: 100px; } }
-
-/*# sourceMappingURL=picB.css.map */
+/*# sourceMappingURL=rangeA.css.map */

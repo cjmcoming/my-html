@@ -3,3 +3,7 @@
 	display: inline-block; height: 30px; line-height: 30px; padding: 0 11px 0 34px; border: 1px solid $cloBorB; border-radius: 3px; position: relative; background: $cloBgB; @include prePro(box-sizing,border-box);
 	&::before{display: block; content: ""; width: 18px; height: 18px; position: absolute; top: 5px; left: 9px; background: url(#{$bgBaseUrl}icon_person.png) no-repeat 0 0;}
 }
+
+@include bp(0,413px) {
+	.bBtnB{padding-right: 9px; font-size: 12px;}
+}

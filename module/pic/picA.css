@@ -124,4 +124,8 @@ body .f12 {
   background-position: center center;
   background-size: cover; }
 
+@media only screen and (max-width: 413px) {
+  .bPicA, .bPicA_bg {
+    height: 300px; } }
+
 /*# sourceMappingURL=picA.css.map */

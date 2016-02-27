@@ -4,3 +4,6 @@
 	&:hover{color: #fff;}
 }
 
+@include bp(0,413px) {
+	.bBtnA{padding: 0 10px; font-size: 12px;}
+}

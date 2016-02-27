@@ -8,15 +8,17 @@ require.config({
 require(['jquery'], function ($) {
 
 	if($("#bPicA") ) {
-		document.body.scrollTop = 300;
-		$(window).on("scroll", function() {
-			var nScrollTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
-			if(nScrollTop < 600) {
-				$("#bPicA_bg").css("bottom", -nScrollTop/2);
-			}else{
-				return;
-			}
-		});
+		if($(window).width() > 413) {
+			document.body.scrollTop = 300;
+			$(window).on("scroll touchmove", function() {
+				var nScrollTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+				if(nScrollTop < 600) {
+					$("#bPicA_bg").css("bottom", -nScrollTop/2);
+				}else{
+					return;
+				}
+			});
+		}
 	}
 
 	if($(".bTabA") ) {

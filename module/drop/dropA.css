@@ -181,6 +181,10 @@ body .f12 {
     line-height: 26px;
     text-align: center; }
 
+@media only screen and (max-width: 413px) {
+  .bDropA {
+    padding: 0 20px 0 10px;
+    font-size: 12px; } }
 /** keyframes **/
 @-webkit-keyframes fadeIn {
   0% {

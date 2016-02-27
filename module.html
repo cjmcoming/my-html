@@ -1,0 +1,155 @@
+﻿<!doctype HTML>
+<html>
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>module</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<style type="text/css">
+		h1{padding: 20px 10px; font-size: 18px;}
+		.module_table{width: 1000px; text-align: left; margin-bottom: 50px; margin-left: 10px;}
+		.module_table th,.module_table td{border: 1px solid #000; padding: 10px;}
+		.module_table th{padding-top: 60px; font-size: 16px; color: #000;}
+		.module_td1{width: 500px;}
+		.module_td2{width: 150px;}
+		.module_td3{width: 350px;}
+	</style>
+</head>
+
+
+<body>
+
+	<h1>UI组件列表</h1>
+
+	<table class="module_table">
+		<tr>
+			<th colspan="3">按钮</th>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<a class="bBtnA" href="#">上传作品</a>
+			</td>
+			<td class="module_td2">bBtnA</td>
+			<td class="module_td3"></td>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<a class="bBtnB" href="#">登录</a>
+			</td>
+			<td class="module_td2">bBtnB</td>
+			<td class="module_td3"></td>
+		</tr>
+		<tr>
+			<th colspan="3">下拉</th>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<div class="bDropA">
+					<span class="bDropA_tit">个人信息</span>
+					<div class="bDropA_pop">
+						<a href="#">个人信息</a>
+						<a href="#">个人信息</a>
+						<a href="#">个人信息</a>
+					</div>
+				</div>
+			</td>
+			<td class="module_td2">bDropA</td>
+			<td class="module_td3">依赖js：blo_drop.js</td>
+		</tr>
+		<tr>
+			<th colspan="3">图片</th>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<div class="bPicB">
+					<img src="img/head.jpg" />
+				</div>
+			</td>
+			<td class="module_td2">bPicB</td>
+			<td class="module_td3"></td>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<ul class="bPicC">
+					<li>
+						<a class="bPicC_a1" href="pjax.html"><div class="bPicC_bg" style="background-image:url(img/photo.jpg);"></div></a>
+						<div class="bPicC_tit">
+							<a class="bPicC_a2" href="pjax.html">作品标题作品标题作品标题作品</a>
+							<span class="bPicC_tag">数码艺术,图形设计,插画</span>
+						</div>
+					</li>
+				</ul>
+			</td>
+			<td class="module_td2">bPicC</td>
+			<td class="module_td3"></td>
+		</tr>
+		<tr>
+			<th colspan="3">切换</th>
+		</tr>
+		<tr>
+			<td class="module_td1">
+				<div class="bTabA" id="bTabA_1">
+					<div class="bTabA_tit"><span class="cur">1</span><span>2</span></div>
+					<div class="bTabA_bod">
+						<div class="bTabA_con show">1</div>
+						<div class="bTabA_con">2</div>
+					</div>
+				</div>
+			</td>
+			<td class="module_td2">bTabA</td>
+			<td class="module_td3">依赖js：blo_tab.js</td>
+		</tr>
+	</table>
+
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.pjax.js"></script>
+	<script type="text/javascript" src="js/blo_tab.js"></script>
+	<script type="text/javascript" src="js/blo_drop.js"></script>
+
+	<script type="text/javascript">
+
+		if($("#bPicA") ) {
+			if($(window).width() > 413) {
+				document.body.scrollTop = 300;
+				$(window).on("scroll touchmove", function() {
+					var nScrollTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+					if(nScrollTop < 600) {
+						$("#bPicA_bg").css("bottom", -nScrollTop/2);
+					}else{
+						return;
+					}
+				});
+			}
+		}
+
+
+		if($(".bDropA") ) {
+			blo_drop($(".bDropA") );
+		}
+
+
+		if($(".bTabA") ) {
+			$(".bTabA").each(function(i) {
+				blo_tab($(".bTabA").eq(i).find(".bTabA_tit span"), $(".bTabA").eq(i).find(".bTabA_bod .bTabA_con"));
+			});
+		}
+
+		$(".bPicC").pjax('.bPicC_a1', '#listPjax', {scrollTo: false});
+		$(".listPjaxBox").on("click", function() {
+			history.go(-1);
+		});
+		$(".listPjax").on("click", function(e) {
+			e.stopPropagation();
+		});
+
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+﻿<!doctype HTML>
+<html>
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>tab</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="rangeA.css" />
+<style type="text/css"> 
+#range { 
+width: 600px; 
+height: 10px; 
+background: rgba(60, 114, 230, .8); 
+background-image: -webkit-linear-gradient(left, red 50%, yellow 50%);
+background-image: -ms-linear-gradient(left, red 50%, yellow 50%);
+background-image: -moz-linear-gradient(left, red 50%, yellow 50%);
+background-image: -o-linear-gradient(left, red 50%, yellow 50%);
+background-image: linear-gradient(left, red 50%, yellow 50%);
+
+
+border: 1px solid #333; 
+-webkit-border-radius: 5px; 
+-webkit-appearance: none !important; 
+} 
+
+#range::-webkit-slider-thumb{ 
+width: 28px; 
+height: 28px; 
+
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc) ); 
+
+border: 1px solid #000; 
+-webkit-box-shadow: 0 0 6px #000; 
+-webkit-border-radius: 14px; 
+-webkit-appearance: none !important; 
+} 
+
+#result { 
+border: 2px solid #ccc; 
+width: 32px; 
+} 
+</style> 
+</head>
+
+
+<body>
+
+	<input type='range' min='0' max='1000' value='500' id='range' /> 
+<input type='text' id='result'/> 
+<script type='text/javascript'> 
+var result = document.getElementById('result'); 
+document.getElementById('range').onchange = document.getElementById('range').oninput = function() { 
+result.value = this.value; 
+} 
+</script> 
+
+</body>
+</html>
+

@@ -167,8 +167,8 @@ body .f12 {
 
 .bPicC_tag {
   display: block;
-  height: 32px;
-  line-height: 32px;
+  height: 22px;
+  line-height: 22px;
   border-fit: overflow;
   color: #b9c1c8; }
 
@@ -176,7 +176,9 @@ body .f12 {
   .bPicC li {
     display: block;
     width: auto;
-    height: 235px; }
+    height: 235px;
+    margin-left: 0;
+    margin-right: 0; }
   .bPicC .bPicC_a1, .bPicC .bPicC_bg {
     width: auto; }
   .bPicC .bPicC_a1 {
@@ -189,9 +191,6 @@ body .f12 {
     margin-top: -75px; }
   .bPicC .bPicC_a2 {
     height: 28px;
-    line-height: 28px; }
-  .bPicC .bPicC_tag {
-    height: 24px;
-    line-height: 24px; } }
+    line-height: 28px; } }
 
 /*# sourceMappingURL=picC.css.map */

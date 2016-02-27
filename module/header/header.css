@@ -133,6 +133,9 @@ body .f12 {
 .bHeader_in {
   padding: 0 70px; }
 
+@media only screen and (max-width: 640px) {
+  .bHeader_in {
+    padding: 0 10px; } }
 .bHeader_logo {
   float: left;
   height: 51px;
@@ -214,6 +217,10 @@ body .f12 {
     line-height: 26px;
     text-align: center; }
 
+@media only screen and (max-width: 413px) {
+  .bDropA {
+    padding: 0 20px 0 10px;
+    font-size: 12px; } }
 /** keyframes **/
 @-webkit-keyframes fadeIn {
   0% {
@@ -367,6 +374,10 @@ body .f12 {
   .bBtnA:hover {
     color: #fff; }
 
+@media only screen and (max-width: 413px) {
+  .bBtnA {
+    padding: 0 10px;
+    font-size: 12px; } }
 /*reset*/
 html, body {
   width: 100%; }
@@ -500,5 +511,10 @@ body .f12 {
     top: 5px;
     left: 9px;
     background: url(../../bg/icon_person.png) no-repeat 0 0; }
+
+@media only screen and (max-width: 413px) {
+  .bBtnB {
+    padding-right: 9px;
+    font-size: 12px; } }
 
 /*# sourceMappingURL=header.css.map */

@@ -16,12 +16,21 @@
 
 <body>
 
-	<div class="bHeader">
+	<div class="bHeader fixed">
 		<div class="bHeader_in">
 
 			<a class="bHeader_logo" href="#">LOGO</a>
 
-			<a class="bBtnB" href="#">登录</a>
+			<a class="bBtnA" href="#">上传作品</a>
+
+			<div class="bDropA">
+				<span class="bDropA_tit">个人信息</span>
+				<div class="bDropA_pop">
+					<a href="#">个人信息</a>
+					<a href="#">个人信息</a>
+					<a href="#">个人信息</a>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -34,7 +43,7 @@
 
 	<div class="listPicB">
 		<div class="bPicB">
-			<img src="img/head.jpg" />
+			<img src="http://placeholder.qiniudn.com/300x300/fff/c00" />
 		</div>
 	</div>
 
@@ -56,36 +65,9 @@
 			<div class="bTabA_bod">
 				<div class="bTabA_con show">
 					
-					<ul class="bPicC">
-						<li>
-							<a class="bPicC_a1" href="pjax.html"><div class="bPicC_bg" style="background-image:url(img/photo.jpg);"></div></a>
-							<div class="bPicC_tit">
-								<a class="bPicC_a2" href="pjax.html">作品标题作品标题作品标题作品</a>
-								<span class="bPicC_tag">数码艺术,图形设计,插画</span>
-							</div>
-						</li>
-						<li>
-							<a class="bPicC_a1" href="pjax.html"><div class="bPicC_bg" style="background-image:url(img/photo.jpg);"></div></a>
-							<div class="bPicC_tit">
-								<a class="bPicC_a2" href="pjax.html">作品标题作品标题作品标题作品</a>
-								<span class="bPicC_tag">数码艺术,图形设计,插画</span>
-							</div>
-						</li>
-						<li>
-							<a class="bPicC_a1" href="pjax.html"><div class="bPicC_bg" style="background-image:url(img/photo.jpg);"></div></a>
-							<div class="bPicC_tit">
-								<a class="bPicC_a2" href="pjax.html">作品标题作品标题作品标题作品</a>
-								<span class="bPicC_tag">数码艺术,图形设计,插画</span>
-							</div>
-						</li>
-						<li>
-							<a class="bPicC_a1" href="pjax.html"><div class="bPicC_bg" style="background-image:url(img/photo.jpg);"></div></a>
-							<div class="bPicC_tit">
-								<a class="bPicC_a2" href="pjax.html">作品标题作品标题作品标题作品</a>
-								<span class="bPicC_tag">数码艺术,图形设计,插画</span>
-							</div>
-						</li>
-					</ul>
+					<div class="listNull">
+						<img src="bg/null.jpg" />
+					</div>
 
 				</div>
 				<div class="bTabA_con">关于</div>
@@ -96,7 +78,6 @@
 
 
 	<div id="listPjaxBox" class="listPjaxBox">
-		<a id="listPjax_close" class="listPjax_close" href="javascript:void(0)"></a>
 		<div id="listPjax" class="listPjax"></div>
 	</div>
 
@@ -136,19 +117,14 @@
 
 		$(".bPicC").pjax('.bPicC_a1', '#listPjax', {scrollTo: false});
 		$("#listPjax").on('pjax:send', function() {
-			$("body").addClass("noscroll");
 			$("#listPjaxBox").show();
 		});
-		$("#listPjaxBox,#listPjax_close").on("click", function(e) {
-			e.stopPropagation();
+		$("#listPjaxBox").on("click", function() {
 			history.go(-1);
+			$("#listPjaxBox").hide();
 		});
 		$("#listPjax").on("click", function(e) {
 			e.stopPropagation();
-		});
-		$("#listPjax").on("pjax:popstate", function() {
-			$("body").removeClass("noscroll");
-			$("#listPjaxBox").hide();
 		});
 
 	</script>

@@ -13,16 +13,15 @@
 .bPicC_bg{height: 240px; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 .bPicC_tit{height: 77px; padding-top: 13px; margin-top: -90px;}
 .bPicC_a2{display: inline-block; height: 33px; line-height: 33px; position: relative; z-index: 2; font-size: 16px; overflow: hidden;}
-.bPicC_tag{display: block; height: 32px; line-height: 32px; border-fit: overflow; color: $cloTxtC;}
+.bPicC_tag{display: block; height: 22px; line-height: 22px; border-fit: overflow; color: $cloTxtC;}
 
 @include bp(0,400px) {
 	.bPicC{
-		li{display: block; width: auto; height: 235px;}
+		li{display: block; width: auto; height: 235px; margin-left: 0; margin-right: 0;}
 		.bPicC_a1,.bPicC_bg{width: auto;}
 		.bPicC_a1{height: 235px;}
 		.bPicC_bg{height: 160px;}
 		.bPicC_tit{height: 65px; padding-top: 10px; margin-top: -75px;}
 		.bPicC_a2{height:28px; line-height: 28px;}
-		.bPicC_tag{height: 24px; line-height: 24px;}
 	}
 }
